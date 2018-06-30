@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿using CoreGraphics;
+using Foundation;
 using UIKit;
 
 namespace TipCalculator
@@ -18,9 +19,12 @@ namespace TipCalculator
 
 		public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
 		{
-			// Override point for customization after application launch.
-			// If not required for your application you can safely delete this method
-
+            // Override point for customization after application launch.
+            // If not required for your application you can safely delete this method
+            UIWindow Window = new UIWindow(UIScreen.MainScreen.Bounds);
+            Window.RootViewController = new MyViewController();
+            Window.MakeKeyAndVisible();
+            
 			return true;
 		}
 
